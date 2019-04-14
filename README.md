@@ -1,3 +1,8 @@
+![Image of APP screen](https://franciscofarinha.com/repo_images/react_meteo_screen.png)
+
+
+## Where to put your api key
+
 ![Image of API_KEY declaration](https://franciscofarinha.com/repo_images/react_meteo_api.png)
 
 To view this project functioning you have to get a free API key from https://openweathermap.org/api and assign it to the const API_KEY on App.js

@@ -1,3 +1,10 @@
+![Image of API_KEY declaration](https://franciscofarinha.com/repo_images/react_meteo_api.png)
+
+To view this project functioning you have to get a free API key from https://openweathermap.org/api and assign it to the const API_KEY on App.js
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

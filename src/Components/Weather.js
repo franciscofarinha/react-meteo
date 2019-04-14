@@ -8,7 +8,7 @@ class Weather extends React.Component {
 			<div className="row">
 				<div className="col-xs-12">
 					<div className="weather__info">
-						<table class="table table-dark">
+						<table className="table table-dark">
 						  <tbody>
 							{ this.props.city && this.props.country && <tr><td> Location: </td> <td> { this.props.city }, { this.props.country }</td></tr>}
 							{ this.props.temperature && <tr><td> Temperature: </td> <td> { this.props.temperature } º </td></tr>}

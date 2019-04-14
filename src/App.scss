@@ -1,0 +1,149 @@
+@mixin breakpoint($breakpoint) {
+    @if $breakpoint == xxs {
+        @media only screen and (max-width: 320px) { @content };
+    }
+    @if $breakpoint == xs {
+        @media only screen and (max-width: 768px) { @content }; 
+    }
+    @if $breakpoint == sm {
+        @media only screen and (max-width: 991px) { @content };
+    }
+    @if $breakpoint == md {
+        @media only screen and (max-width: 1199pxpx) { @content };
+    }
+    @if $breakpoint == lg {
+        @media only screen and (min-width: 1200px) { @content };
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
+
+body {
+	font-family: 'Montserrat','Helvetica','Arial', sans-serif;
+	background: rgba(0,0,0,0.4) url(./img/main-bg.jpg) no-repeat;
+	background-size:cover;
+	height:100vh;
+}
+.main-wrapper {
+	margin-top:100px;
+	@include breakpoint(sm) {
+       margin-top:0px !important;
+    }
+}
+.container {
+	background: rgba(0,0,0,0.4);
+	min-height:70vh;
+	@include breakpoint(sm) {
+       min-height:100vh;
+       border-radius:0px;
+    }
+	transition: all 0.5s ease;
+	border-radius:5px;
+	padding:0px;
+	.row {
+		padding:0px;
+	}
+}
+
+.title-container {
+	background: none;
+	color:white;
+	padding:0px 20px;
+    .title-container__inner {
+    	text-align: center;
+
+    }
+    .title-container__title {
+
+    }
+}
+
+.form-container {
+	//background: blue;
+	form {
+		display: block;
+		margin:0 auto;
+		width:100%;
+		padding:20px;
+		@include breakpoint(md) {
+			padding:0px;
+		}
+		input {
+			background-color: transparent !important;
+			border: 0;
+			border-bottom: solid 2px #ffffff;
+			border-radius:0px;
+			padding-bottom: 4px;
+			color: #fff !important;
+			font-weight: lighter;
+			letter-spacing: 2px;
+			margin-bottom: 30px;
+			margin-right: 20px;
+			font-size: 20px;
+			outline:0;
+			-webkit-box-shadow: none;
+  			box-shadow: none;
+		}
+		input::placeholder {
+			color:white;
+		}
+		input:focus {
+			background-color: transparent !important;
+			border: 0;
+			border-bottom: solid 2px #ffffff;
+			border-radius:0px;
+			padding-bottom: 4px;
+			color: #fff !important;
+			font-weight: lighter;
+			letter-spacing: 2px;
+			margin-bottom: 30px;
+			margin-right: 20px;
+			font-size: 20px;
+			outline:0;
+			-webkit-box-shadow: none;
+  			box-shadow: none;
+		}
+		input:-webkit-autofill {
+		    -webkit-box-shadow: none;
+		    -webkit-text-fill-color: #000000;
+		    background: transparent !important;
+		}
+		button:focus {
+			-webkit-box-shadow: none;
+  			box-shadow: none;
+		}
+		
+	}
+}
+
+.weather__info {
+	//background:white;
+	color:white;
+	width:400px;
+	max-width:90%;
+	margin: 0 auto;
+	margin-top:30px;
+	display: block;
+
+	.weather__key {
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom:10px;
+		padding:5px;
+	}
+	.weather__value {
+		text-transform: none;
+		font-weight: normal;
+		padding-left:5px;
+	}
+
+	.weather__error {
+		margin:20px 0;
+		background: rgba(255,93,93,0.8);
+		color:#f3f3f3;
+		text-align: center;
+		border-radius:5px;
+		padding:20px 10px;
+	}
+}
